@@ -97,7 +97,7 @@ const Hero = () => {
 
                     {/* Booking Card container (Grid column 2) */}
 					<div className="booking-card w-full max-w-md mx-auto lg:mx-0 lg:justify-self-end">
-						<div className="p-8 rounded-3xl bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-lg border border-white/20 shadow-2xl">
+						<div className="p-8 rounded-3xl bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-xs lg:backdrop-blur-lg border border-white/20 shadow-2xl">
 							<div className="flex flex-col gap-6">
 								{/* Card Header */}
 								<div className="flex items-center justify-between gap-4">
