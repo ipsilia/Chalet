@@ -69,7 +69,7 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<section className="relative w-full h-screen overflow-hidden font-sans">
+		<section className="relative w-full min-h-screen font-sans">
 			{/* Background Image */}
 			<div
 				className="absolute inset-0 bg-cover bg-left md:bg-center z-0"
@@ -80,7 +80,7 @@ const Hero = () => {
 			</div>
 
 			{/* Hero Content Wrapper */}
-			<div className="relative z-10 h-full container mx-auto flex justify-center items-start lg:justify-end lg:items-center px-4">
+			<div className="relative z-10 h-full container mx-auto flex justify-center items-start lg:justify-end lg:items-center px-4 pt-28 lg:pt-70">
                 
                 {/* --- This is the new layout container using CSS Grid --- */}
                 <div className="hero-content-block w-full max-w-6xl lg:grid lg:grid-cols-[1fr,auto] lg:gap-x-8 lg:justify-end">
