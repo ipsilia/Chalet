@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // SVG Icon for the logo - a stylized chalet
 const ChaletIcon = ({ className }: { className?: string }) => (
