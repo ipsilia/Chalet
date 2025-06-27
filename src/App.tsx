@@ -6,23 +6,18 @@ import Hero from './components/hero/Hero';
 import LoadingScreen from './components/feedback/LoadingScreen';
 
 function App() {
-  // This state now controls the fade-in of the main content
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <main className="bg-[var(--color-background)]">
-      {/* Loading screen is still self-contained, but now it reports when it's done */}
       <LoadingScreen onFinished={() => setIsLoaded(true)} />
       
-      {/* This wrapper now controls the visibility of the main content.
-        It starts with opacity-0 and fades in when isLoaded becomes true.
-      */}
       <div className={`transition-opacity duration-700 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <Navbar />
-        <Hero />
+        {/* Pass the isLoaded state as a prop here */}
+        <Hero isLoaded={isLoaded} />
       </div>
       
-      {/* ... other components ... */}
     </main>
   );
 }
