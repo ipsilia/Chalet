@@ -7,11 +7,14 @@
 @import "tailwindcss";
 
 /* 3. Define your custom theme tokens using CSS variables */
-@themgite {
+@theme {
   --font-display: "Plus Jakarta Sans", sans-serif;
   --font-subtitle: "Space Grotesk", sans-serif;
   /* We can set Roboto as the default body font by overriding --font-sans */
   --font-sans: "Roboto", sans-serif;
+
+  /* --- ADDED YOUR BACKGROUND COLOR VARIABLE HERE --- */
+  --color-background: #05182b;
 }
 
 /* You can also add any other global styles here */

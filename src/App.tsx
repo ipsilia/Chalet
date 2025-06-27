@@ -1,23 +1,28 @@
+// src/App.tsx
+
+import { useState } from 'react';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/hero/Hero';
+import LoadingScreen from './components/feedback/LoadingScreen';
 
 function App() {
-  return (
-    // The main container for the application.
-    // The bg-gray-900 provides a base background color, though the Hero component will cover it.
-    <main className="bg-gray-900">
-      {/* The Navbar component will be fixed at the top, overlaying other content. */}
-      <Navbar />
-      
-      {/* The Hero component provides the main visual and introductory content. */}
-      <Hero />
+  // This state now controls the fade-in of the main content
+  const [isLoaded, setIsLoaded] = useState(false);
 
-      {/* You can add more sections/components below the hero section here. */}
-      {/* For example:
-      <div className="h-screen bg-white text-black p-12">
-        <h2 className="text-3xl font-bold text-center">Features Section</h2>
-      </div> 
+  return (
+    <main className="bg-[var(--color-background)]">
+      {/* Loading screen is still self-contained, but now it reports when it's done */}
+      <LoadingScreen onFinished={() => setIsLoaded(true)} />
+      
+      {/* This wrapper now controls the visibility of the main content.
+        It starts with opacity-0 and fades in when isLoaded becomes true.
       */}
+      <div className={`transition-opacity duration-700 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        <Navbar />
+        <Hero />
+      </div>
+      
+      {/* ... other components ... */}
     </main>
   );
 }
