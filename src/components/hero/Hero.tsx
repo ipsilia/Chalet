@@ -63,7 +63,7 @@ const Hero = ({ isLoaded }: { isLoaded: boolean }) => {
                         </h1>
                         {/* Added hero-subtitle class */}
                         <p className="hero-subtitle font-subtitle mt-4 text-lg md:text-xl text-white/80 max-w-md mx-auto lg:mx-0">
-                            modern cabins in breathtaking locations.
+                            swiss cabins in breathtaking locations.
                         </p>
                     </div>
 
