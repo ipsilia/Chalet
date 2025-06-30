@@ -52,8 +52,8 @@ const AnimatedLogoV13 = ({
 
         // --- INITIAL STATE CONFIGURATION ---
         gsap.set(drawablePaths, {
-            strokeDasharray: (i, el) => el.getTotalLength(),
-            strokeDashoffset: (i, el) => el.getTotalLength(),
+            strokeDasharray: (_i, el) => el.getTotalLength(),
+            strokeDashoffset: (_i, el) => el.getTotalLength(),
             autoAlpha: 1
         });
         gsap.set(ripples, { attr: { r: 0 }, opacity: 1, transformOrigin: 'center' });

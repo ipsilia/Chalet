@@ -1,6 +1,7 @@
 // src/pages/DevelopmentPage.tsx
 
 import React from "react";
+import Logo from "../components/icons/Logo";
 
 // Import the logo components you want to display
 
@@ -42,6 +43,9 @@ const DevelopmentPage = () => {
 
 				<main className="grid grid-cols-1 gap-8">
                     <h1 className="text-5xl font-bold font-display">Back To Sketching</h1>
+                    <LogoDisplayCard title="Oldie">
+                        <Logo/>
+                    </LogoDisplayCard>
 				</main>
 			</div>
 		</div>
