@@ -1,0 +1,9 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <title>The Sans-Serif Branch</title>
+  <text x="10" y="70" font-family="Montserrat, sans-serif" font-size="40" font-weight="bold" fill="#36454F">BR</text>
+  <text x="95" y="70" font-family="Montserrat, sans-serif" font-size="40" font-weight="bold" fill="#36454F">ND</text>
+  <g>
+    <path d="M 60 70 L 90 70 L 75 40 Z M 66 65 L 84 65 L 75 50 Z" fill="#36454F"/>
+    <path d="M75,57.5 L85,50 C87,52 85,55 82,56 M85,50 C87,48 90,50 90,52" stroke="#6B8E23" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

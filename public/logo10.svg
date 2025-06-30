@@ -1,0 +1,11 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <title>The Serif Root</title>
+  <g fill="#800020" font-family="Playfair Display, serif" font-size="40" font-weight="bold">
+    <text x="10" y="70">B</text>
+    <g id="rooted-R">
+        <path d="M 45 70 V 40 H 65 C 75 40 75 55 65 55 L 55 55"/>
+        <path d="M 55 55 L 75 70 C 75 70 70 80 65 85 S 60 75 60 75 M 65 85 S 68 80 72 82"/>
+    </g>
+    <text x="80" y="70">AND</text>
+  </g>
+</svg>

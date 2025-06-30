@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <title>The Sheltered Sapling</title>
+  <g stroke="#6B8E23" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M 50 20 L 80 75 L 20 75 Z"/>
+    <path d="M 50 70 V 45 C 50 45 40 50 45 40"/>
+    <path d="M 50 45 C 50 45 60 50 55 40"/>
+  </g>
+</svg>

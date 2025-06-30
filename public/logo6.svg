@@ -1,0 +1,5 @@
+<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <title>The Sprouting Seed</title>
+  <path d="M 30 70 A 20 20 0 0 1 70 70 Z" fill="#5C4033"/>
+  <path d="M 50 70 V 40 C 50 55 40 50 40 40 M 50 40 C 50 55 60 50 60 40" stroke="#6B8E23" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
