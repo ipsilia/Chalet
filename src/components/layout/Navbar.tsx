@@ -1,21 +1,19 @@
-import { useState } from "react";
+import React, { useState } from "react"; // Ensure React is imported for types
 
 // Import all icons from their respective files
 import Logo from "../icons/Logo";
 import MenuIcon from '../icons/MenuIcon';
 import XIcon from '../icons/XIcon';
 
-const Navbar = () => {
+// --- FIX APPLIED HERE: The component now accepts props ---
+const Navbar = ({ currentPage, setCurrentPage }: { currentPage: string, setCurrentPage: React.Dispatch<React.SetStateAction<string>> }) => {
     // State to manage the mobile menu's visibility
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     // Navigation links data
     const navLinks = [
-        { name: "Home", href: "#", active: true },
-        { name: "Services", href: "#", active: false },
-        { name: "Special offers", href: "#", active: false },
-        { name: "Support", href: "#", active: false },
-        { name: "About us", href: "#", active: false },
+        { key: "home", name: "Home" },
+        { key: "development", name: "Development" },
     ];
 
     return (
@@ -35,31 +33,31 @@ const Navbar = () => {
                     "
                 >
                     {/* Logo and Brand Name */}
-                    <a href="#" className="flex items-center gap-2 ml-4">
-                        <Logo className="w-12 h-12 text-white" />
+                    <button onClick={() => setCurrentPage('home')} className="flex items-center gap-2 ml-4">
+                        <Logo className="w-12 h-12" />
                         <span className="hidden sm:inline text-xl font-bold text-white tracking-wider ">
                             Nesum
                         </span>
-                    </a>
+                    </button>
 
                     {/* Desktop Navigation Links */}
                     <div className="hidden lg:flex items-center gap-2 p-1.5 rounded-full border border-white/20">
                         {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
+                            <button
+                                key={link.key}
+                                onClick={() => setCurrentPage(link.key)}
                                 className={`
                                     px-6 py-2 rounded-full text-white text-sm font-medium
-                                    transition-all duration-300
+                                    transition-colors duration-300
                                     ${
-                                        link.active
+                                        currentPage === link.key
                                             ? "bg-white/20"
                                             : "hover:bg-white/10"
                                     }
                                 `}
                             >
                                 {link.name}
-                            </a>
+                            </button>
                         ))}
                     </div>
 
@@ -67,13 +65,13 @@ const Navbar = () => {
                     <div className="hidden lg:flex items-center gap-2 p-1.5 rounded-full border border-white/20 mr-2">
                         <a
                             href="#"
-                            className="px-6 py-2 rounded-full text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
+                            className="px-6 py-2 rounded-full text-white text-sm font-medium transition-colors duration-300 hover:bg-white/10"
                         >
                             Contact us
                         </a>
                         <a
                             href="#"
-                            className="px-6 py-2 rounded-full text-white text-sm font-medium bg-white/20 transition-all duration-300"
+                            className="px-6 py-2 rounded-full text-white text-sm font-medium bg-white/20 transition-colors duration-300"
                         >
                             Login
                         </a>
@@ -109,35 +107,25 @@ const Navbar = () => {
                     >
                         <div className="flex flex-col items-center gap-4">
                             {navLinks.map((link) => (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
+                                <button
+                                    key={link.key}
+                                    onClick={() => {
+                                        setCurrentPage(link.key);
+                                        setIsMenuOpen(false); // Close menu on selection
+                                    }}
                                     className={`
                                         w-full text-center px-6 py-3 rounded-full text-white text-md font-medium
-                                        transition-all duration-300
+                                        transition-colors duration-300
                                         ${
-                                            link.active
+                                            currentPage === link.key
                                                 ? "bg-white/20"
                                                 : "hover:bg-white/10"
                                         }
                                     `}
                                 >
                                     {link.name}
-                                </a>
+                                </button>
                             ))}
-                            <div className="w-full border-t border-white/20 my-2"></div>
-                            <a
-                                href="#"
-                                className="w-full text-center px-6 py-3 rounded-full text-white text-md font-medium transition-all duration-300 hover:bg-white/10"
-                            >
-                                Contact us
-                            </a>
-                            <a
-                                href="#"
-                                className="w-full text-center px-6 py-3 rounded-full text-white text-md font-medium bg-white/20 transition-all duration-300"
-                            >
-                                Login
-                            </a>
                         </div>
                     </div>
                 )}
